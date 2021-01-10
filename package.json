@@ -4,7 +4,7 @@
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ jennypollack/function-signature-registry",
+    "deploy": "rm -rf generated && graph codegen && graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ jennypollack/function-signature-registry --access-token $GRAPH_ACCESS_TOKEN",
     "create-local": "graph create --node http://localhost:8020/ jennypollack/function-signature-registry",
     "remove-local": "graph remove --node http://localhost:8020/ jennypollack/function-signature-registry",
     "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 jennypollack/function-signature-registry"

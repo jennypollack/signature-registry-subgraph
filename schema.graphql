@@ -1,6 +1,5 @@
-type ExampleEntity @entity {
+type Entry @entity {
   id: ID!
-  count: BigInt!
-  creator: Bytes! # address
-  signature: Bytes! # bytes4
+  functionName: String!
+  functionSig: String!
 }
